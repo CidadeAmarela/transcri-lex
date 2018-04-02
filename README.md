@@ -14,4 +14,7 @@ Adaptando e resgatando algoritmos de http://www.teses.usp.br/teses/disponiveis/7
 
 Ver [procedimentos em desenvolvimento aqui](BR/Federal/Lei/_originais/lote2018-03-13~planalto).
 
-Nota: a versão inicial do repositório foi [duplicada](https://help.github.com/articles/duplicating-a-repository/) de ppkrauss/transcri-lex, que foi em seguida removido. 
+
+Nota: a versão inicial do repositório foi [transferida com todos os seus *commits*](https://stackoverflow.com/a/17373088/287948) de *ppkrauss/transcri-lex*. Os procedimentos de transferência ou [duplicação](https://help.github.com/articles/duplicating-a-repository/) são mais indicados do que o *fork* quando, como neste caso, não se deseja preservar vínculos com o repositório original, apenas garantir a autoria  (prova de trabalho neste caso) das contribuições.
+
+
