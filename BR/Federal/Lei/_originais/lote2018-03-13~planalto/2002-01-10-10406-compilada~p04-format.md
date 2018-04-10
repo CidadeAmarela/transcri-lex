@@ -5964,7 +5964,13 @@ contenha:
 **I** - o seu nome, nacionalidade, domicílio, estado civil e, se casado, o
 regime de bens;
 
-**II** - a firma, com a respectiva assinatura autógrafa;
+**II** - a firma, com a respectiva assinatura autógrafa que poderá ser
+substituída pela assinatura autenticada com certificação digital ou meio
+equivalente que comprove a sua autenticidade, ressalvado o disposto no
+[inciso I do § 1º do art.
+4º da Lei Complementar
+nº 123, de 14 de dezembro de
+2006](#)
 
 **III** - o capital;
 
@@ -13158,23 +13164,26 @@ companheiro;
 autor da herança de dispor livremente de seus bens por ato de última
 vontade.
 
+- - - -
+
 **Art. 1.815**. A exclusão do herdeiro ou legatário, em qualquer desses
 casos de indignidade, será declarada por sentença.
 
-**Parágrafo único.** O direito de demandar a exclusão do herdeiro ou
-legatário extingue-se em quatro anos, contados da abertura da sucessão.
+**§ 1º**  O direito de demandar a
+exclusão do herdeiro ou legatário extingue-se em quatro anos, contados
+da abertura da sucessão.
+
+**§ 2º**  Na hipótese do inciso I
+do art. 1.814, o Ministério Público tem legitimidade para demandar a
+exclusão do herdeiro ou legatário.
 
 **Art. 1.816**. São pessoais os efeitos da exclusão; os descendentes do
 herdeiro excluído sucedem, como se ele morto fosse antes da abertura da
 sucessão.
 
-**§ 1º** Parágrafo único. O
-direito de demandar a exclusão do herdeiro ou legatário extingue-se em
-quatro anos, contados da abertura da sucessão.
-
-**§ 2º** Na hipótese do inciso I
-do art. 1.814, o Ministério Público tem legitimidade para demandar a
-exclusão do herdeiro ou legatário.
+**Parágrafo único.** O excluído da sucessão não terá direito ao usufruto ou
+à administração dos bens que a seus sucessores couberem na herança, nem
+à sucessão eventual desses bens.
 
 **Art. 1.817**. São válidas as alienações onerosas de bens hereditários a
 terceiros de boa-fé, e os atos de administração legalmente praticados
