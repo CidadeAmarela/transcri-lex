@@ -17,6 +17,28 @@ Documentos oficiais no Brasil ainda encontram-se, em sua maior parte, em formato
 ### Formatos HTML-lex para intercâmbio e convervação
 ... relação entre a maturidade institucional e a adoção de um formato ...
 
+## Semântica
+
+* [Organizações](http://schema.org/Organization): empresas e organizaçoes não-governamentais. Associações, condomínios, empresas, etc.
+
+* [Governo](http://schema.org/GovernmentOrganization): organizaçoes governamentais dos poderes executivo, legislativo e jurídico.
+
+* **Jurisdiçao** de uma organização:
+  - Se governamenal, jurisdição do poder associado.
+  - Senão sede da organização: jurisdição sob a qual está vinculada a sede da organização. Determina competência jurídica em contratos ou serviços de cartórios. 
+
+* **Autoridade** emitente documento: é a própria organizaçao, ou, no caso governamental, nova da autoridade relativa ao emissor.
+
+* **Autoridade** emitente documento: é a própria organizaçao, ou, no caso governamental, nova da autoridade relativa ao emissor.
+
+
+## Sintaxe
+
+Sintaxe da URN LEX geral de um documento de associação ou condomínio:
+
+&nbsp; `urn:lex:`
+
+
 ## Algoritmos para a conversão de identificadores
 
 Documentos do repositório são identificados pelo seu *path* relativo à raiz do repositório (raiz do [git](https://en.wikipedia.org/wiki/Git) ou [zip](https://en.wikipedia.org/wiki/Archive_file)). Documentos finais (entregáveis) devem apresentar internamente, como metadado a sua [URN LEX](https://en.wikipedia.org/wiki/Lex_(URN)), e esta URN deve ser consistente com o *path*.
@@ -61,3 +83,18 @@ Funções de conversão em Javascript, [PHP](lib_transcrilex.php) e PLpg/SQL.
 
 * `transcrilex_urn2path(urnlex)`
 * `transcrilex_path2urn(filename)`
+
+## originais
+
+Arquivos orgiginais requerem autenticação SHA3 (em arquivo `_sha3-256sum.b58btc.txt`) e entrada
+no arquivo `_fonte.csv` &mdash; no futuro o perl gerador poderia incluir a coluna SHA3 no CSV automaticamente.
+
+O arquivo CSV tem sempre a mesma estrutura de 3 colunas, `arquivo,autoridade,url`, com, respectivamente o nome de arquivo praticado na pasta, a URN LEX da autoridade que forneceu o original, e a URL do arquivo... Falta a data de acesso ou de ultima confirmação da SHA3.
+
+Exemplos:
+
+* `BR/Federal/Lei/_originais/2002-01-10-num10406.fonte0-camara.htm` representa a URN LEX `br:federal:lei:2002-01-10;10406` e tem como extensão completa `fonte0-camara.htm`, que indica que o arquivo é fonte primária (nível zero), formato HTML, fornecida pela autoridade "camara". O indicador de autoridade é apenas uma chave para resolver eventuais ambiguidades no CSV, onde a coluna "autoridade" descreve com mais precisão pelo prefixo URN LEX da autoridade.
+
+* `BR/Federal/Lei/_originais/2002-01-10-num10406.fonte0-senado.htm` representa a URN LEX `br:federal:lei:2002-01-10;10406` e tem como extensão completa `fonte0-senado.htm`. Como no caso anterior o diferenciador "senado" estabelece a entrada no CSV com a URN LEX da autoridade.
+
+* `BR/Federal/Lei/_originais/2002-01-10-num10406~compilada.fonte0-planalto.htm` representa a URN LEX `br:federal:lei:2002-01-10;10406~compilada` e tem como extensão completa `fonte0-planalto.htm`. Como no caso anterior o diferenciador "planalto" estabelece a entrada no CSV com a URN LEX da autoridade.
