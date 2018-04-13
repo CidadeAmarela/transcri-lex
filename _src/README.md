@@ -19,18 +19,18 @@ Documentos oficiais no Brasil ainda encontram-se, em sua maior parte, em formato
 
 ## Semântica
 
-* [Organizações](http://schema.org/Organization): empresas e organizaçoes não-governamentais. Associações, condomínios, empresas, etc.
+* [*Organizações*](http://schema.org/Organization): empresas e organizaçoes não-governamentais.
+   - *Tipo de organização*: Associações, condomínios, empresas, etc.
 
 * [Governo](http://schema.org/GovernmentOrganization): organizaçoes governamentais dos poderes executivo, legislativo e jurídico.
 
 * **Jurisdiçao** de uma organização:
-  - Se governamenal, jurisdição do poder associado.
-  - Senão sede da organização: jurisdição sob a qual está vinculada a sede da organização. Determina competência jurídica em contratos ou serviços de cartórios. 
+  - Se governamenal, jurisdição do poder associado. Ver [área servida](http://schema.org/areaServed)
+  - Senão [cidade da sede da organização](https://www.wikidata.org/wiki/Property:P159): jurisdição sob a qual está vinculada a sede da organização. Determina competência jurídica em contratos ou serviços de cartórios. 
 
 * **Autoridade** emitente documento: é a própria organizaçao, ou, no caso governamental, nova da autoridade relativa ao emissor.
 
-* **Autoridade** emitente documento: é a própria organizaçao, ou, no caso governamental, nova da autoridade relativa ao emissor.
-
+* **Tipo de documento**: conforme a autoridade podem haver diferentes tipos de documentos. Por exemplo a Câmara Municipal pode emitir *leis*, mas uma associação só pode emitir *atas* e retificações do seu estatuto.
 
 ## Sintaxe
 
