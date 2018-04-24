@@ -86,7 +86,8 @@ De (busca) | Para (substituição) | parâmetros
 Conversão de volta para HTML,
 
 ```sh
-pandoc -s -t HTML5 --template ~/gits/transcri-lex/_src/markdown/html5.pandoc.tpl \
+pandoc -s -t HTML5 -f markdown-tex_math_dollars /
+  --template /opt/lex-gits/transcri-lex/_src/markdown/html5.pandoc.tpl /
     2002-01-10-10406-compilada~p04-format.md \
   > 2002-01-10-10406-compilada~p05-pandoc.htm
 ```

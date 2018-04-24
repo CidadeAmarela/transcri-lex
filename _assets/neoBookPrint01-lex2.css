@@ -1,0 +1,432 @@
+/**
+ * Layout do Livro de Artesanal, mídia para impressão e PDF.
+ * Contexto "@media print".  v1.0
+ */
+
+@page {
+  size:   A5 portrait;
+  color: cmyk(0%, 0%, 0%, 75%);
+  padding-bottom: 3mm;
+  font-size: 8.5pt;
+  border-top: none;
+  @bottom-left { content: none; }
+  @bottom-center { content: none; }
+  @bottom-right { content: none; }
+ }
+ @page:right {
+   margin: 1.0cm 1.0cm 1.2cm 1.5cm;
+ }
+ @page:left {
+   margin: 1.0cm 1.5cm 1.2cm 1.0cm;
+ }
+
+@page main {
+  font-family: Arial, prince-no-fallback; /* old Helvetica */
+  size:   A5 portrait;
+  color: cmyk(0%, 0%, 0%, 75%);
+  padding-bottom: 3mm;
+  font-size: 8.5pt;
+
+  @bottom-center {
+    vertical-align: top;
+    font-size: 7.2pt;
+    border-top: thin solid cmyk(0%, 0%, 0%, 75%);
+    padding-top: 1mm;
+  }
+
+  @bottom-left {
+    vertical-align: top;
+    font-size: 7.2pt;
+    border-top: thin solid cmyk(0%, 0%, 0%, 75%);
+    padding-top: 1mm;
+  }
+
+  @bottom-right {
+    vertical-align: top;
+    padding-top: 1mm;
+    font-size: 7.2pt;
+    border-top: thin solid cmyk(0%, 0%, 0%, 75%);
+  }
+}
+
+@page main:right {
+  margin: 1.0cm 1.0cm 1.2cm 1.5cm;
+  @bottom-right {
+    font-size: 8.5pt;
+    content: counter(page);
+    font-weight: bold;
+    text-align: right;
+  }
+  /*  @bottom-left { content: "\00a0 Condomínio ALTESA \00a0";  ou content nbsp = \00a0 } */
+}
+
+@page main:left {
+  margin: 1.0cm 1.5cm 1.2cm 1.0cm;
+  @bottom-left {
+    font-size: 8.5pt;
+    content: counter(page);
+    font-weight: bold;
+    text-align: left;
+  }
+  @bottom-right {
+    content: string(h1title);
+  }
+}
+
+/* importante incluir aqui tudo o que recebe paginação e rodapé */
+article:not([class]),    /* #REGULAMENTO e #MANUAL */
+article.estatuto, article.regInt {
+  page: main;
+}
+
+/* #  #  #  #  #  #  #  #  # #  # */
+
+
+/* FONTE DO TEXTO */
+body {
+  font-family: 'EB Garamond', prince-no-fallback;   /* serifada */
+  font-size: 10.2pt;
+  text-align: justify;
+
+  hyphens: auto;
+  hyphenate-before: 4;
+  hyphenate-after: 3;
+  prince-linebreak-magic: none; /* important! */
+}
+
+
+
+/* - - - - */
+
+article section h1,
+article section h2,
+article section h3 {
+  page-break-after: avoid;
+}
+article section.brk {
+  page-break-before: always;
+}
+
+p,
+div.art,
+div.cls,
+article .parteInicial,
+article .parteFinal {
+  page-break-inside: avoid;
+}
+/* - - - - */
+
+article p.art,
+article p.cls,
+article p.caput,
+article p.par {
+text-align: justify;
+}
+
+article header .Ementa {
+  width:70%;
+  color: #444;
+  margin: 0 auto; /* to align */
+  text-align: right;
+  font-style: italic; /* melhor mudar de cor do que italicos*/
+}
+
+
+article header,
+article footer {
+  padding-top:    2em;
+  padding-bottom: 2em;
+}
+article footer {  /* * elements right; */
+  text-align: center;
+}
+article footer .fn {  /* footnote */
+  text-align: left;
+}
+
+article footer.ParteFinal{
+  font-size: 120%;
+}
+
+/* ## auditable-metadata in a DL list ## */
+
+nav.auditable-metadata dl {margin: 0; padding: 0}
+
+nav.auditable-metadata dt,
+nav.auditable-metadata dd { display: inline; }
+
+nav.auditable-metadata dt:after { content: ":"; }
+
+nav.auditable-metadata dt {margin:0; color:#333;}
+nav.auditable-metadata dd {margin:0; font-family: Arial, prince-no-fallback; padding-right:1em;}
+dl.itemSep dt:not(:first-child):before  { content: "\002022"; padding-right:1em;}
+
+
+/**general and RESET **/
+h1 { font-size:145%; }
+h2 { font-size:130%; }
+h3 { font-size:115%; }
+ul {
+  margin-top:0;
+  list-style-type:disc;
+}
+ol { margin-top:0; }
+
+
+/* FRONT BLOCK */
+
+header { /* sem efeito */
+  padding-top:    0.3em;
+  padding-bottom: 0.3em;
+}
+
+h1,h2,h3,h4 {
+  font-family: Arial, prince-no-fallback; /* avisa se falta fonte*/
+}
+
+header {  text-align: left;}
+header h1 {
+  font-size:175%;
+}
+
+
+/* BODY BLOCK */
+
+section {
+  padding-top: 0; /* ver inicio de cada */
+}
+
+section h1,
+section h2,
+section h3,
+section h4 {
+  padding: 0;
+}
+
+section h1 {
+  font-size:145%;
+  background-color: #E9E9E9;
+}
+section h2 {
+  font-size:130%;
+  font-variant:small-caps;
+}
+
+section h3 {
+  font-size:115%;
+}
+
+div.par {
+	padding: 0;
+	margin:  0;
+}
+
+p.art, p.cls { padding-top: 0; } /* OLD 12pt */
+
+div.art, div.cls {
+	padding: 0 ; /* top   OLD 2pt 0 0*/
+	margin:0;
+}
+
+
+div.art p.caput label:first-child,
+div.cls p.caput label:first-child,
+div.par p.caput label:first-child,
+p.art label:first-child,
+p.cls label:first-child,
+p.par label:first-child,
+p.item label:first-child,
+h1>label:first-child,
+h2>label:first-child,
+h3>label:first-child,
+section.preamble h2 {
+  color:#611;
+  font-weight: bold;
+}
+
+/* revisar: como fica UL e OL? */
+div.art>p.item, div.cls>p.item {padding-left: 10pt;}
+div.par>p.item {padding-left: 18pt;}
+
+
+/* - - - - - - - - */
+
+img {
+  prince-image-resolution: 320dpi;
+}
+article.capa, article.epigrafe, article.dedicatoria, .poesia, h1, h2, h3, h4, summary   {
+  hyphens: none;
+}
+
+article {
+  page-break-after: always;
+}
+
+article:not([class]) p, /* todos os demais paragrafos! */
+#pre2 p,
+#pre3 p {
+  margin-top: 0.8em;
+  margin-bottom: 0.1em;
+}
+
+/* LIXO e perigoso!
+article:not([class]) p:not(:nth-child(2))
+, #pre2 p:not(:nth-child(2))
+, #pre3 p:not(:nth-child(2)) {
+  text-indent: 1.5em;
+}
+*/
+
+summary p {
+  font-variant: small-caps;
+}
+summary p label {
+  font-weight: bold;
+}
+
+
+h1 {
+  text-align: left;
+  /*font-variant: small-caps;*/
+  font-family: Arial;
+  font-size: 160%;
+}
+
+
+div.twocol {
+  columns:2;
+  column-gap: 2em; /*  correto 1.8em; */
+}
+
+article.poesia {
+  text-align: left;
+}
+
+
+
+/*  * * * * *    */
+
+
+#MANUAL img {
+  width: 86%;
+}
+#MANUAL {
+  text-align: left;
+}
+
+#MANUAL ul {
+  margin: 0;
+  padding-left: 1.4em;
+}
+
+/* #  #  #  #  #  #  #  #  # #  # */
+/* #      FICHA CATALOG           */
+
+#ficha {
+  counter-reset: page 1;
+}
+
+article.ficha header,
+article.ficha header h1 {
+  font-family: Arial;
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+article.ficha footer {
+  padding-top: 3em;
+  text-align: center;
+}
+
+/* #  #  #  #  #  #  #  #  # #  # */
+/* #  SUMÁRIO                     */
+
+article h1:first-child {
+    string-set: h1title content();
+}
+
+article.sumario {
+    string-set: h1title 'Sumário';
+}
+
+article header#intro h1  { /* para nao usar nome inteiro, certo usar label content(); .. not */
+    string-set: h1title 'ESTATUTO SOCIAL';
+}
+
+/* #  #  #  #  #  #  #  #  # #  # */
+/* #  dedicatoria e EPIGRAFE                 */
+
+article.dedicatoria {
+    string-set: h1title 'Dedicatória';
+}
+article.epigrafe {
+    string-set: h1title 'Epígrafe';
+}
+article.dedicatoria, article.epigrafe {
+    text-align: center;
+    font-size: 120%;
+}
+
+
+/* #  #  #  #  #  #  #  #  # #  # */
+/* #  agradecimentos              */
+
+article.agradecimentos footer {
+  padding-top: 1.5em;
+  text-align: center;
+}
+
+/* #  #  #  #  #  #  #  #  # #  # */
+/* UTIL                           */
+
+span.npages {  /* para abertura e finalização */
+  content: counter(pages);
+}
+
+._justStop,
+#FAQ h1,
+#FAQ h2 {
+  text-align:left;
+}
+
+
+/* ## ToC - Table of Contents ## */
+/* summary tag */
+summary  {
+  width: 90%;
+  margin-left: 10%;
+  padding:0;
+  text-align: left;
+  font-weight: normal;
+}
+
+#posFicha summary p {
+  font-size: 110%;
+  margin:0;
+  padding:1pt; /* cuidado */
+}
+
+summary p {
+  margin:0;
+  padding:1pt; /* cuidado */
+}
+.parteInicial summary p {
+  font-size: 80%;
+}
+.parteInicial summary p.l2 {
+  margin-left:10pt
+}
+.parteInicial summary p.l3 {
+  margin-left:20pt
+}
+
+summary a.nacsec::after {
+  color:black;
+  content: leader(".") target-counter(attr(href), page);
+}
+summary a.nacsec:link,
+summary a.nacsec:visited,
+summary a.nacsec:active {
+  color:black;
+  text-decoration: none;
+}

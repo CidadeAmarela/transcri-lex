@@ -1,0 +1,134 @@
+article  {
+  font-size:12pt;
+  font-family:"Times New Roman";
+}
+/* FRONT BLOCK */
+
+/* ## nav ## */
+
+article nav.bottom {
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
+
+nav.auditable-metadata {
+  width: 85%;
+  margin: 0 auto; /* to align */
+  text-align: center;
+  font-size: 80%;
+  background: linear-gradient(#DDD,#DFD);
+  padding-top: 12pt;
+  padding-bottom: 12pt;
+}
+nav.auditable-metadata p.info {
+  text-align: left;
+}
+article nav.auditable-metadata p {
+   padding:0; margin:3pt;
+}
+article nav.auditable-metadata div.nada {
+   padding:0; margin:0;
+}
+article nav.auditable-metadata p label {
+   color: #534;
+   font-family:Arial;
+}
+
+
+
+
+header {
+  padding-top:    3em;
+  padding-bottom: 3em;
+}
+h1,h2,h3,h4 {
+  font-family: Arial;
+}
+
+header {  text-align: center;}
+header h1 {
+  font-size:18pt;
+  background-color: #E9E9E9;
+}
+
+header .ementa {
+	color: #555;
+}
+
+/* BODY BLOCK */
+
+
+section {
+  padding-top:    1em;
+}
+
+section h1 {
+  font-size:17pt;
+  background-color: #E9E9E9;
+}
+section h2 {
+  font-size:15pt;
+  background-color: #E9E9E9;
+}
+section h3 {
+  font-size:13pt;
+}
+
+div.par {
+	padding: 0;
+	margin:  0;
+}
+
+p.art, p.cls { padding-top: 5pt; }
+
+div.art, div.cls {
+	padding: 5pt 0 0; /* top */
+	margin:0;
+}
+
+div.art p.caput span:first-child,
+div.cls p.caput span:first-child,
+div.par p.caput span:first-child,
+p.art span:first-child,
+p.cls span:first-child,
+p.par span:first-child,
+p.item span:first-child,
+h1>span:first-child, h2>span:first-child, h3>span:first-child,
+div.art p.caput label:first-child,
+div.cls p.caput label:first-child,
+div.par p.caput label:first-child,
+p.art label:first-child,
+p.cls label:first-child,
+p.par label:first-child,
+p.item label:first-child,
+h1>label:first-child, h2>label:first-child, h3>label:first-child,
+section.preamble h2 {
+  color:#611;
+  font-weight: bold;
+}
+
+div.art>p.item,
+div.cls>p.item {padding-left: 10pt;}
+
+
+div.par>p.item {padding-left: 18pt;}
+
+
+/* BACK BLOCK */
+
+footer {
+	width: 90%
+}
+footer * { text-align: right;}
+
+
+footer {
+  padding-top:    3em;
+  padding-bottom: 3em;
+}
+
+p.local_data {
+	padding-bottom: 15pt;
+}
+
+p.ass { font-style: italic; }
