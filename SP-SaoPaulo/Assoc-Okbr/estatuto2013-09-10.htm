@@ -3,34 +3,13 @@
     <meta charset="utf-8"/>
     <title>Estatuto OKBR 2013</title>
     <meta name="dtd" content="html5-lex2"/>
-    <meta name="urn-lex" content="br;sp;sao.paulo:assoc;okbr:estatuto:2013-09-10"/>
     <meta name="source" content="http://ok.org.br"/>
-    <link href="http://css.oficial.news/tema02-lex2.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="http://css.oficial.news/tema02-lex2.css" rel="stylesheet" type="text/css"/> <!-- seria media="screen", falta print -->
   </head>
   <body>
 
-    <article id="oficial" itemscope="" itemtype="http://schema.org/DigitalDocument" itemid="urn:lex:br;sp;sao.paulo:assoc;okbr:estatuto:2013-09-10">
-
-      <nav class="auditable-metadata"><!-- não tem ID e precisa ser única tag nav -->
-        <b>Informe catalográfico:</b>
-        <p class="info">Este documento foi aprovado em assembleia realizada no dia <span itemprop="http://schema.org/contentReferenceTime"><time datetime="2013-09-10">10 de setembro de 2013</time></span>.</p>
-        <p class="info" itemprop="http://schema.org/creator" content="assoc;okbr" itemtype="http://schema.org/Organization" itemscope="">
-          Foi emitido sob responsabilidade do coletivo fundador da <span itemprop="http://schema.org/name">Associação Open Knowledge Brasil</span>
-          (<span itemprop="http://schema.org/vatID">CNPJ 19.131.243/0001-97</span>),
-          com sede em  <span itemprop="http://schema.org/address" content="http://wikidata.org/entity/Q174">São Paulo - SP</span>.
-          <!-- <br/>Nome uniforme deste documento: <code >urn:lex:br;sp;sao.paulo:assoc;okbr:estatuto:2013-09-10</code> -->
-        </p>
-        <p class="info" itemscope="" itemprop="http://schema.org/isPartOf" itemid="urn:lex:br;sp;sao.paulo:cartorio;5.rtd:registro.oficial;microfilme:2013-10-03;52508">
-        	Este documento foi <span itemprop="http://schema.org/associatedMedia" content="http://wikidata.org/entity/Q830450">microfilmado</span>
-          pelo <span itemprop="http://schema.org/publisher" itemtype="http://schema.org/Organization" itemscope="">
-          <span itemprop="http://schema.org/name">5º Oficial de Registro de Títulos e Documentos Civil de Pessoa Física</span>
-          <span itemprop="http://schema.org/address" content="http://wikidata.org/entity/Q174">da Capital - SP</span>
-            &#160; (<span itemprop="http://schema.org/vatID">CNPJ 18.404.753/0001-28</span>)
-          </span><!-- publisher-->
-            sob número <span itemprop="http://schema.org/identifier">52.508</span>
-            em <span itemprop="http://schema.org/datePublished"><time datetime="2013-10-03">03 de outubro de 2013</time></span>.
-        </p><!-- isPartOf publicação oficial -->
-      </nav>
+    <article id="oficial" itemid="urn:lex:br;sp;sao.paulo:assoc;okbr:estatuto:2013-09-10"
+      itemscope="" itemtype="http://schema.org/DigitalDocument">
 
       <header id="ini">
         <h1 itemprop="http://schema.org/name"><label itemprop="http://schema.org/genre">Estatuto Social</label>
@@ -105,7 +84,7 @@
             <p class="item"><label>I</label>. participar e manifestar-se nas Assembléias Gerais;</p>
             <p class="item"><label>II</label>. ter o direito de ser diretamente informado de todas as informações pertinentes à Associação;</p>
             <p class="item"><label>III</label>. envolver-se nas atividades promovidas pela OKF Brasil;</p>
-            <p class="item"><label>IV</label>. requerer, com pelo menos ⅕ (um quinto) dos membros, a convocação da Assembléia Geral;</p>
+            <p class="item"><label>IV</label>. requerer, com pelo menos 1/5 (um quinto) dos membros, a convocação da Assembléia Geral;</p>
             <p class="item"><label>V</label>. propor a admissão de novos Associados;</p>
             <p class="item"><label>VI</label>. desligar-se da Associação.</p>
             <p class="par"><label>§ único</label> – Aos Associados Honorários são assegurados os direitos previstos nos incisos I, III e VI do caput deste artigo.</p>
@@ -301,11 +280,16 @@
         <p class="art" id="art46"><label>Artigo 46º</label> – Os casos omissos ou duvidosos no presente estatuto serão resolvidos pela Diretoria com recurso para o Conselho Deliberativo.</p>
       </section>
 <!--
-      <footer class="extra carimbos assinaturas">
-        <span itemprop="http://schema.org/accountablePerson">Everton Zanella Alvarenga</span>
-        <span>Diretor Executivo</span>
-        <span>Marcos Roberto Fuchs</span>
-        <span>Advogado OAB/SP 101.663</span>
+
+      <footer class="extra carimbos assinaturas" itemprop="http://schema.org/accountablePerson">
+        <div itemscope="" itemtype="http://schema.org/Person">
+          <span itemprop="http://schema.org/name">Everton Zanella Alvarenga</span>
+          <span itemprop="http://schema.org/jobTitle">Diretor Executivo</span>
+        </div>
+        <div itemscope="" itemtype="http://schema.org/Person">
+          <span itemprop="http://schema.org/name">Marcos Roberto Fuchs</span>
+          <span itemprop="http://schema.org/jobTitle">Advogado</span> <span itemprop="http://schema.org/memberOf">OAB/SP</span> 101.663
+        </div>
       </footer>
 -->
 <!--
@@ -329,7 +313,34 @@ Firma reconhecida (por semelhança) de Everton Zanela em 26/set/2013  pelo 34o O
 de Registro Civil das Pessoas Naturais - Rua Frei Caneca, 371 - CEP 0137-001
 </pre>
 </div>
+style="background-image:url(https://www.w3.org/Icons/SW/sw-cube.png); background-repeat:no-repeat; background-position:right bottom;"
+https://github.com/openresty/set-misc-nginx-module#set_unescape_uri
+teria como fazer no proprio NGINX?
+http://mailman.nginx.org/pipermail/nginx/2007-March/000765.html
 -->
+
+    <nav class="auditable-metadata"><!-- não tem ID e precisa ser única tag nav -->
+      <a href="#" ticle="clique para ver esta ficha interpretada por um robô da Web Semântica" onclick="alert('web semantica!'); return false;"><img style="float:right" src="https://www.w3.org/Icons/SW/sw-cube.png"/></a>
+      <b><a href="http://oficial.news/" onclick="location.href = this.href + document.getElementById('oficial').getAttribute('itemid'); return false;">Informe catalográfico</a>:</b>
+      <p class="info">Este documento foi aprovado em assembleia realizada no dia <span itemprop="http://schema.org/contentReferenceTime"><time datetime="2013-09-10">10 de setembro de 2013</time></span>.</p>
+      <p class="info" itemprop="http://schema.org/creator" content="assoc;okbr" itemtype="http://schema.org/Organization" itemscope="">
+        Foi emitido sob responsabilidade do coletivo fundador da <span itemprop="http://schema.org/name">Associação Open Knowledge Brasil</span>
+        (<span itemprop="http://schema.org/vatID">CNPJ 19.131.243/0001-97</span>),
+        com sede em  <span itemprop="http://schema.org/address" content="http://wikidata.org/entity/Q174">São Paulo - SP</span>.
+      </p>
+      <p class="info" itemscope="" itemprop="http://schema.org/isPartOf" itemid="urn:lex:br;sp;sao.paulo:cartorio;5.rtd:registro.oficial;microfilme:2013-10-03;52508">
+        Este documento foi <span itemprop="http://schema.org/associatedMedia" content="http://wikidata.org/entity/Q830450">microfilmado</span>
+        pelo <span itemprop="http://schema.org/publisher" itemtype="http://schema.org/Organization" itemscope="">
+        <span itemprop="http://schema.org/name">5º Oficial de Registro de Títulos e Documentos Civil de Pessoa Física</span>
+        <span itemprop="http://schema.org/address" content="http://wikidata.org/entity/Q174">da Capital - SP</span>
+          &#160; (<span itemprop="http://schema.org/vatID">CNPJ 18.404.753/0001-28</span>)
+        </span><!-- publisher-->
+          sob número <span itemprop="http://schema.org/identifier">52.508</span>
+          em <span itemprop="http://schema.org/datePublished"><time datetime="2013-10-03">03 de outubro de 2013</time></span>.
+      </p><!-- isPartOf publicação oficial -->
+    </nav>
+
+
     </article>
   </body>
 </html>
